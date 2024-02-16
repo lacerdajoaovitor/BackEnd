@@ -1,3 +1,5 @@
+<!--6545|x2wfZLMlLdIfTjrzAIF9LudEatttTCMe-->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,7 +9,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <script>
 async function fetchApiData() {
-  const apiUrl = 'https://api.invertexto.com/v1/faker?token=6425|at4CHIcGEXPa2vbKVMksg84sWP7cr2qp&locale=pt_BR';
+  const apiUrl = 'https://api.invertexto.com/v1/faker?token=6565|3DYTD5j8rgKbFJqwFDk99TpQ8ynxAVYa&locale=pt_BR';
   let tableContent = '';
   for (let i = 0; i < 5; i++) {
     const response = await fetch(apiUrl);
@@ -19,6 +21,9 @@ async function fetchApiData() {
         <td>${data.cpf}</td>
         <td>${data.birth_date}</td>
         <td>${data.email}</td>
+        <td>${data.credit_card.type}</td>
+        <td>${data.credit_card.number}</td>
+        
       </tr>
     `;
   }
@@ -39,6 +44,7 @@ async function fetchApiData() {
         <th>CPF</th>
         <th>Data de Nasc.</th>
         <th>Email</th>
+        <th>Tipo Do Cartão</th>
       </tr>
     </thead>
     <tbody id="apiTableBody">
